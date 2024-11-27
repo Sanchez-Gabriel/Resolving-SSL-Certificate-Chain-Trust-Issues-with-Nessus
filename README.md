@@ -1,0 +1,2 @@
+# Resolving-SSL-Certificate-Chain-Trust-Issues-with-Nessus
+In this lab, I performed a vulnerability scan using Tenable Nessus Essentials, which flagged an issue related to SSL certificate trust. The scan identified that the X.509 certificate for a remote service could not be trusted due to a broken certificate chain. Specifically, the certificate was issued by an unknown certificate authority (CA) 
