@@ -6,9 +6,12 @@ In this lab, I performed a vulnerability scan using Tenable Nessus Essentials, w
 ## Process:
 
 ### Initial Scan:
-During the scan, Nessus flagged a "Medium SSL Certificate Cannot Be Trusted" vulnerability.
+During the scan, Nessus flagged an **"SSL Certificate Cannot Be Trusted"** vulnerability.
 
 The certificate chain was broken because the remote host sent a certificate signed by an unknown CA. The certificate in question was issued by the self-signed certificate used by the FileZilla server.
+
+### ![SSL Certificate Issue](https://imgur.com/lojrysH.png)
+*The image above shows the Nessus scan results highlighting the SSL certificate issue.*
 
 ### Detailed Investigation:
 The Nessus scan revealed the following certificate details:
@@ -36,7 +39,3 @@ To resolve the trust issue and prevent potential MITM attacks, the recommended s
 ## Tools Used:
 - Tenable Nessus Essentials
 - Command-line tools (e.g., `ipconfig` for networking)
-
-## Issue Found in Nessus Scan:
-
-![SSL Certificate Issue](https://imgur.com/lojrysH.png)
